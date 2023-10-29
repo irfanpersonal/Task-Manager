@@ -22,7 +22,7 @@ const getAllTasks = async(req, res) => {
         createdBy: req.user.userID
     };
     if (search) {
-        queryObject.name = {$regex: search, $options: ''};
+        queryObject.name = {$regex: search, $options: 'i'};
     }
     if (completed && completed !== 'all') {
         queryObject.completed = completed;
