@@ -14,7 +14,7 @@ Task Manager is an awesome app that lets you easily create, view, and update tas
 
 1st - Download the project
 
-2nd - Run the following command "npm run install" (install dependencies)
+2nd - Run the following command "npm install" (install dependencies)
 
 3rd - Create a .env file in root with the following three key value pairs: MONGO_URI, JWT_SECRET, and JWT_LIFETIME
 
