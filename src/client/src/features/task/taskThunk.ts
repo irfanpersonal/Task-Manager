@@ -1,6 +1,6 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import axios from 'axios';
-import {RootState} from '../../store';
+import {type RootState} from '../../store';
 
 export const getAllTasks = createAsyncThunk('task/getAllTasks', async(_, thunkAPI) => {
     try {

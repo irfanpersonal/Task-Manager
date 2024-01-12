@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {getCurrentPageLocation} from '../../utils';
-import {createTask, deleteSingleTask, editSingleTask} from '../task/taskThunk';
+import {createTask, deleteSingleTask, editSingleTask, getSingleTask} from '../task/taskThunk';
 import {deleteAccount} from '../user/userThunk';
 
 const initialState = {
@@ -24,6 +24,8 @@ const navigationSlice = createSlice({
             state.location = state.location === '/' ? '/#' : '/';
         }).addCase(deleteAccount.fulfilled, (state) => {
             state.location = state.location === '/landing' ? '/landing#' : '/landing';
+        }).addCase(getSingleTask.rejected, (state) => {
+            state.location = state.location === '/' ? '/#' : '/';
         });
     }
 });
